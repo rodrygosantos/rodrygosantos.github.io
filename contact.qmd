@@ -1,0 +1,13 @@
+---
+title: "Contact"
+---
+
+Contact info
+: e-mail: rodrygo at dcc.ufmg.br\
+  phone: +55 31 3409 6578
+
+Mailing address
+: DCC / ICEx / UFMG\
+  Av. Antônio Carlos, 6627, Pampulha\
+  Belo Horizonte, MG, Brazil\
+  CEP 31270-901

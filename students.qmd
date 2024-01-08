@@ -1,0 +1,67 @@
+---
+title: "Students"
+---
+
+I am always keen to supervise highly motivated students in the broad area of [information retrieval](/research/). Feel free to [contact me](/contact/) about current opportunities and to discuss topics of mutual interest.
+
+## Current students
+
+### PhD students
+
+- Alberto Hideki Ueda
+- Bruno Laporais Pereira
+- Rafael Glater da Cruz Machado
+
+### MSc students
+
+- Aian Shay Bentes Damasceno Cardoso
+- Arthur Pontes Nader
+- Breno de Sousa Matos
+- Elves Mateus Rodrigues
+- Jair Gomes Soares Júnior
+- João Victor da Silva Dias Canavarro
+- Regis Nogueira Fontes
+
+## Former students
+
+### PhD students
+
+- Ramon Pereira Lopes (PhD, 2017 --- 1st advisor: [Renato Assunção](http://homepages.dcc.ufmg.br/~assuncao/))\
+ [Similarity-enhanced collaborative filtering](http://hdl.handle.net/1843/ESBF-ANWNLQ)
+
+### MSc students
+
+- Rennan Cordeiro Lima (MSc, 2023)\
+  [Extractive summarization of publication profiles for expert search in academia](#)
+- Pedro Dalla Vecchia Chaves (MSc, 2021)\
+ [Efficient exploration and exploitation for sequential music recommendation](http://hdl.handle.net/1843/38955)
+- Filipe Barreto do Nascimento (MSc, 2021)\
+ [On the impact of sample reduction strategies for heterogeneous network representation learning](http://hdl.handle.net/1843/46003)
+- Karen Stéfany Martins (MSc, 2020 --- 1st advisor: [Pedro Vaz de Melo](http://homepages.dcc.ufmg.br/~olmo/))\
+ [On the impact of attribute noise on movie review polarity classification](http://hdl.handle.net/1843/39044)
+- Arthur Barbosa Câmara (MSc, 2018)\
+ [Navigating semantically annotated queries for task understanding](http://hdl.handle.net/1843/ESBF-BAGNPA)
+- Gustavo Penha (MSc, 2018)\
+ [Performance prediction for enhancing ensemble learning](http://hdl.handle.net/1843/ESBF-B5EQGD)
+- Lucas Chaves Lima (MSc, 2018)\
+ [Utility models for complex search tasks](#)
+- Bruno Laporais Pereira (MSc, 2017)\
+ [Online music recommendation from implicit feedback](http://hdl.handle.net/1843/JCES-ARFLHX)
+- Felipe Moraes Gomes (MSc, 2017)\
+ [On effective dynamic search systems](http://hdl.handle.net/1843/ESBF-AMDPLN)
+- Jordan Silva (MSc, 2017)\
+ [On location-based pruning for point-of-interest recommendation](http://hdl.handle.net/1843/JCES-AVLGY6)
+- Luiz Raul Sanchez Vazquez (MSc, 2017)\
+ [Repurchase intention for lodging recommendation](http://hdl.handle.net/1843/ESBF-AMDPZC)
+- Rafael Glater da Cruz Machado (MSc, 2017)\
+ [Intent-aware semantic query annotation](http://hdl.handle.net/1843/30489)
+- Vitor Mangaravite (MSc, 2016)\
+ [Non-boolean authorship models for expert search in academia](http://hdl.handle.net/1843/ESBF-AKUMJ6)
+- Isac Sandin Ribeiro (MSc, 2015 --- 1st advisor: [Alberto Laender](http://homepages.dcc.ufmg.br/~laender/))\
+ [Content-based tag recommendation for expertise profiling](http://hdl.handle.net/1843/ESBF-A2FJ92)
+- Geraldo Ribeiro Franciscani Jr. (MSc, 2014 --- 1st advisor: [Raquel Minardi](http://homepages.dcc.ufmg.br/~raquelcm/))\
+ [An annotation process for data visualization techniques](#)
+- Thales Filizola Costa (MSc, 2014 --- 1st advisor: [Nivio Ziviani](http://homepages.dcc.ufmg.br/~nivio/))\
+ [Taxonomy-driven content-based recommendation for new items](http://hdl.handle.net/1843/ESBF-9KJR2D)
+- Lucas Cunha Miranda (MSc, 2013 --- 1st advisor: [Alberto Laender](http://homepages.dcc.ufmg.br/~laender/))\
+ [Characterizing video access patterns in mainstream media portals](http://hdl.handle.net/1843/ESBF-9GMQ8R)
