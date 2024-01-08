@@ -1,6 +1,5 @@
 ---
 title: "Publications"
-# bibliography: [_bibliography/articles.bib, _bibliography/books.bib, _bibliography/demos.bib, _bibliography/epapers.bib, _bibliography/papers.bib, _bibliography/proceedings.bib, _bibliography/reports.bib, _bibliography/theses.bib, _bibliography/tutorials.bib, _bibliography/wpapers.bib]
 csl: apa-cv.csl
 filters:
   - multibib
