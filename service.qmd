@@ -20,8 +20,8 @@ title: "Service"
 - Editorial Board member of ACM Transactions on Social Computing
 - Editorial Board member of Found. and Trends in Information Retrieval
 - Program Committee co-chair of CIKM 2023
-- Senior Program Committee member of SIGIR 2023
 - Senior Program Committee member of RecSys 2023
+- Senior Program Committee member of SIGIR 2023
 - Steering Committee member of RecSys
 
 ## 2022
