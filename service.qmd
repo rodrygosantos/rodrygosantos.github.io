@@ -2,11 +2,16 @@
 title: "Service"
 ---
 
+## 2025
+
+- Senior Program Committee member of ECIR 2025
+
 ## 2024
 
 - Doctoral Consortium co-chair of UMAP 2024
 - Editorial Board member of ACM Transactions on Social Computing
 - Editorial Board member of Found. and Trends in Information Retrieval
+- Senior Program Committee member of RecSys 2024
 - Senior Program Committee member of SIGIR 2024
 - Steering Committee member of RecSys
 
