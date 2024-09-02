@@ -17,7 +17,6 @@ I am always keen to supervise highly motivated students in the broad area of [in
 
 - Aian Shay Bentes Damasceno Cardoso
 - Arthur Pontes Nader
-- Breno de Sousa Matos
 - Elves Mateus Rodrigues
 - João Victor da Silva Dias Canavarro
 - Regis Nogueira Fontes
@@ -31,6 +30,8 @@ I am always keen to supervise highly motivated students in the broad area of [in
 
 ### MSc students
 
+- Breno de Sousa Matos (MSc, 2024)\
+  [Towards misinformation span detection](#)
 - Rennan Cordeiro Lima (MSc, 2023)\
   [Extractive summarization of publication profiles for expert search in academia](#)
 - Pedro Dalla Vecchia Chaves (MSc, 2021)\
