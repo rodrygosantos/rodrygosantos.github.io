@@ -77,6 +77,13 @@
     "text": "Technical reports\n\n\nRocha, B. P. S., Santos, R. L. T., Rezende, C. G., Loureiro, A. A. F., & Almeida, V. A. F. (2007). Model-driven crawling and extraction of web-based virtual communities. Departamento de Ciência da Computação, Universidade Federal de Minas Gerais.\n\n\nSantos, R. L. T., Rocha, B. P. S., Rezende, C. G., & Loureiro, A. A. F. (2007). Characterizing the YouTube video-sharing community. Departamento de Ciência da Computação, Universidade Federal de Minas Gerais."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "I am an associate professor at the Department of Computer Science (DCC) of the Federal University of Minas Gerais (UFMG), Brazil. I hold BSc (2005) and MSc (2007) degrees in computer science from UFMG, and a PhD (2013) in computer science from the University of Glasgow, UK. I was a visiting researcher at the Terrier Team of the University of Glasgow (2008) and at the search quality team of Google Brazil (2012), and a postdoctoral research associate within the Brazilian National Institute of Science and Technology for the Web (2013). I am a member of the ACM SIGIR, a CNPq research fellow, and an affiliate member of the Brazilian Academy of Sciences (2016-2020)."
+  },
+  {
     "objectID": "students.html",
     "href": "students.html",
     "title": "Students",
@@ -88,7 +95,7 @@
     "href": "students.html#current-students",
     "title": "Students",
     "section": "Current students",
-    "text": "Current students\n\nPhD students\n\nAlberto Hideki Ueda\nBruno Laporais Pereira\nLeandro Augusto Lacerda Campos\nRafael Glater da Cruz Machado\n\n\n\nMSc students\n\nAian Shay Bentes Damasceno Cardoso\nArthur Pontes Nader\nElves Mateus Rodrigues\nJoão Victor da Silva Dias Canavarro\nRegis Nogueira Fontes"
+    "text": "Current students\n\nPhD students\n\nAlberto Hideki Ueda\nBruno Laporais Pereira\nLeandro Augusto Lacerda Campos\nRafael Glater da Cruz Machado\n\n\n\nMSc students\n\nArthur Pontes Nader\nElves Mateus Rodrigues\nJoão Victor da Silva Dias Canavarro\nRegis Nogueira Fontes"
   },
   {
     "objectID": "students.html#former-students",
@@ -103,6 +110,27 @@
     "title": "Research",
     "section": "",
     "text": "My research interests encompass large-scale search and recommendation in various domains, including the Web, social media, and enterprises. As a result of my work, I have contributed to the open-source Terrier Information Retrieval platform, and published research papers in several major academic venues. In particular, I am a regular speaker and program commitee member of several premiere conferences in IR, including SIGIR, CIKM, WWW, WSDM, RecSys, ECIR, ICTIR, AIRS, and SPIRE. I received the best paper award at RecSys 2015 and best paper runner-up award at RecSys 2020. In addition, I have served in the organization committee of WSDM 2016, RecSys 2020, SIGIR 2021, CIKM 2023, and UMAP 2024, and currently serve as steering committee member for RecSys, and as a member of the editorial board of ACM Transactions on Social Computing and Foundations and Trends in Information Retrieval.\n\nMy Lattes CV\nMy DBLP page\nMy Scholar profile"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "2014.1 / 2014.2 / 2015.1 / 2016.1 / 2016.2 / 2017.1 / 2017.2 / 2018.1 / 2018.2 / 2019.1 / 2019.2 / 2020.1 / 2020.2 / 2021.1 / 2021.2 / 2022.1 / 2022.2 / 2023.1 / 2023.2 / 2024.1 / 2024.2\n\n\n\n\n\n2022.1 / 2023.1\n\n\n\n\n\n2014.2 / 2015.2 / 2016.2 / 2017.1 / 2018.1 / 2019.1 / 2020.2 / 2021.1 / 2021.2 / 2022.2 / 2023.2 / 2024.2\n\n\n\n\n\n2024.1 / 2024.2"
+  },
+  {
+    "objectID": "teaching.html#current-courses",
+    "href": "teaching.html#current-courses",
+    "title": "Teaching",
+    "section": "",
+    "text": "2014.1 / 2014.2 / 2015.1 / 2016.1 / 2016.2 / 2017.1 / 2017.2 / 2018.1 / 2018.2 / 2019.1 / 2019.2 / 2020.1 / 2020.2 / 2021.1 / 2021.2 / 2022.1 / 2022.2 / 2023.1 / 2023.2 / 2024.1 / 2024.2\n\n\n\n\n\n2022.1 / 2023.1\n\n\n\n\n\n2014.2 / 2015.2 / 2016.2 / 2017.1 / 2018.1 / 2019.1 / 2020.2 / 2021.1 / 2021.2 / 2022.2 / 2023.2 / 2024.2\n\n\n\n\n\n2024.1 / 2024.2"
+  },
+  {
+    "objectID": "teaching.html#past-courses",
+    "href": "teaching.html#past-courses",
+    "title": "Teaching",
+    "section": "Past courses",
+    "text": "Past courses\n\nAdvanced Databases\n\n2014.1\n\n\n\nAlgorithms & Data Structures II\n\n2015.1 / 2015.2 / 2016.1\n\n\n\nRanking Models\n\n2017.2 / 2018.2 / 2019.2"
   },
   {
     "objectID": "service.html",
@@ -217,38 +245,10 @@
     "text": "2011\n\nProgram Committee member of CIKM 2011\nProgram Committee member of DDR at ECIR 2011\nProgram Committee member of ECIR 2011\nProgram Committee member of QRU at SIGIR 2011"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "2014.1 / 2014.2 / 2015.1 / 2016.1 / 2016.2 / 2017.1 / 2017.2 / 2018.1 / 2018.2 / 2019.1 / 2019.2 / 2020.1 / 2020.2 / 2021.1 / 2021.2 / 2022.1 / 2022.2 / 2023.1 / 2023.2 / 2024.1 / 2024.2\n\n\n\n\n\n2022.1 / 2023.1\n\n\n\n\n\n2014.2 / 2015.2 / 2016.2 / 2017.1 / 2018.1 / 2019.1 / 2020.2 / 2021.1 / 2021.2 / 2022.2 / 2023.2 / 2024.2\n\n\n\n\n\n2024.1 / 2024.2"
-  },
-  {
-    "objectID": "teaching.html#current-courses",
-    "href": "teaching.html#current-courses",
-    "title": "Teaching",
-    "section": "",
-    "text": "2014.1 / 2014.2 / 2015.1 / 2016.1 / 2016.2 / 2017.1 / 2017.2 / 2018.1 / 2018.2 / 2019.1 / 2019.2 / 2020.1 / 2020.2 / 2021.1 / 2021.2 / 2022.1 / 2022.2 / 2023.1 / 2023.2 / 2024.1 / 2024.2\n\n\n\n\n\n2022.1 / 2023.1\n\n\n\n\n\n2014.2 / 2015.2 / 2016.2 / 2017.1 / 2018.1 / 2019.1 / 2020.2 / 2021.1 / 2021.2 / 2022.2 / 2023.2 / 2024.2\n\n\n\n\n\n2024.1 / 2024.2"
-  },
-  {
-    "objectID": "teaching.html#past-courses",
-    "href": "teaching.html#past-courses",
-    "title": "Teaching",
-    "section": "Past courses",
-    "text": "Past courses\n\nAdvanced Databases\n\n2014.1\n\n\n\nAlgorithms & Data Structures II\n\n2015.1 / 2015.2 / 2016.1\n\n\n\nRanking Models\n\n2017.2 / 2018.2 / 2019.2"
-  },
-  {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
     "text": "Contact info\n\ne-mail: rodrygo at dcc.ufmg.br\nphone: +55 31 3409 6578\n\nMailing address\n\nDCC / ICEx / UFMG\nAv. Antônio Carlos, 6627, Pampulha\nBelo Horizonte, MG, Brazil\nCEP 31270-901"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About",
-    "section": "",
-    "text": "I am an associate professor at the Department of Computer Science (DCC) of the Federal University of Minas Gerais (UFMG), Brazil. I hold BSc (2005) and MSc (2007) degrees in computer science from UFMG, and a PhD (2013) in computer science from the University of Glasgow, UK. I was a visiting researcher at the Terrier Team of the University of Glasgow (2008) and at the search quality team of Google Brazil (2012), and a postdoctoral research associate within the Brazilian National Institute of Science and Technology for the Web (2013). I am a member of the ACM SIGIR, a CNPq research fellow, and an affiliate member of the Brazilian Academy of Sciences (2016-2020)."
   }
 ]
