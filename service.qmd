@@ -5,6 +5,7 @@ title: "Service"
 ## 2025
 
 - Senior Program Committee member of ECIR 2025
+- Tutorial co-chair of SIGIR 2025
 
 ## 2024
 
