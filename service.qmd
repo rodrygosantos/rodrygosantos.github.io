@@ -4,7 +4,10 @@ title: "Service"
 
 ## 2025
 
+- Editorial Board member of ACM Transactions on Social Computing
+- Editorial Board member of Found. and Trends in Information Retrieval
 - Senior Program Committee member of ECIR 2025
+- Senior Program Committee member of SIGIR 2025
 - Tutorial co-chair of SIGIR 2025
 
 ## 2024
