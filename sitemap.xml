@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rodrygosantos.github.io/students.html</loc>
-    <lastmod>2025-02-13T04:37:03.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rodrygosantos.github.io/teaching.html</loc>
-    <lastmod>2025-02-13T04:37:03.772Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rodrygosantos.github.io/contact.html</loc>
-    <lastmod>2025-02-13T04:37:03.771Z</lastmod>
+    <loc>https://rodrygosantos.github.io/service.html</loc>
+    <lastmod>2025-02-27T10:12:12.385Z</lastmod>
   </url>
   <url>
     <loc>https://rodrygosantos.github.io/publications.html</loc>
-    <lastmod>2025-02-13T04:37:03.771Z</lastmod>
+    <lastmod>2025-02-27T10:12:12.384Z</lastmod>
   </url>
   <url>
-    <loc>https://rodrygosantos.github.io/service.html</loc>
-    <lastmod>2025-02-13T04:37:03.772Z</lastmod>
+    <loc>https://rodrygosantos.github.io/teaching.html</loc>
+    <lastmod>2025-02-27T10:12:12.385Z</lastmod>
   </url>
   <url>
     <loc>https://rodrygosantos.github.io/index.html</loc>
-    <lastmod>2025-02-13T04:37:03.771Z</lastmod>
+    <lastmod>2025-02-27T10:12:12.384Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rodrygosantos.github.io/students.html</loc>
+    <lastmod>2025-02-27T10:12:12.385Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rodrygosantos.github.io/contact.html</loc>
+    <lastmod>2025-02-27T10:12:12.384Z</lastmod>
   </url>
   <url>
     <loc>https://rodrygosantos.github.io/research.html</loc>
-    <lastmod>2025-02-13T04:37:03.771Z</lastmod>
+    <lastmod>2025-02-27T10:12:12.385Z</lastmod>
   </url>
 </urlset>
