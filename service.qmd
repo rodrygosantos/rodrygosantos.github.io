@@ -4,6 +4,7 @@ title: "Service"
 
 ## 2025
 
+- Editorial Board member of ACM Transactions on Information Systems
 - Editorial Board member of ACM Transactions on Social Computing
 - Editorial Board member of Found. and Trends in Information Retrieval
 - Senior Program Committee member of ECIR 2025
