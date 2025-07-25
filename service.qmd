@@ -2,6 +2,10 @@
 title: "Service"
 ---
 
+## 2026
+
+- Short Paper Program Committee co-chair of WSDM 2026
+
 ## 2025
 
 - Editorial Board member of ACM Transactions on Information Systems
