@@ -4,6 +4,7 @@ title: "Service"
 
 ## 2026
 
+- Senior Program Committee member of ECIR 2025
 - Short Paper Program Committee co-chair of WSDM 2026
 
 ## 2025
