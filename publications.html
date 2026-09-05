@@ -94,6 +94,35 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -384,6 +413,15 @@ Santos, R. L. T., Marinho, L. B., Daly, E. M., Chen, L., Falk, K., Koenigstein, 
 <section id="conference-papers" class="level2">
 <h2 class="anchored" data-anchor-id="conference-papers">Conference papers</h2>
 <div id="refs-papers" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-costa2026bresci" class="csl-entry" role="listitem">
+Costa, L. G., Souza, Á. M., Andrade, M. M., Santos, R. L. T., Meira Jr., W., &amp; Pappa, G. L. (2026). Contradiction detection in brazilian legislative bills: A limited labeled data study. <em>Anais Do XX Brazilian e-Science Workshop</em>, 89–96. <a href="https://doi.org/10.5753/bresci.2026.249442">https://doi.org/10.5753/bresci.2026.249442</a>
+</div>
+<div id="ref-costa2026ht" class="csl-entry" role="listitem">
+Costa, L., Souza, Á., Rodrigues, E., Glater, R., Maia, M., Santos, W., Migueletto, M., Santos, R. L. T., Meira Jr., W., &amp; Pappa, G. (2026). <span>ReSB</span><span class="math inline">\(^2\)</span>: Retrieving similar brazilian state bills. <em>Proceedings of the 37th ACM Conference on Hypertext and Social Media</em>.
+</div>
+<div id="ref-matos2026icwsm" class="csl-entry" role="listitem">
+Matos, B., Lima, R. C., Zannettou, S., Benevenuto, F., &amp; Santos, R. L. T. (2026). Misinformation span detection in videos via audio transcripts. <em>Proceedings of the Twentieth International AAAI Conference on Web and Social Media</em>, 2839–2850. <a href="https://doi.org/10.1609/icwsm.v20i1.42786">https://doi.org/10.1609/icwsm.v20i1.42786</a>
+</div>
 <div id="ref-pereira2025recsys" class="csl-entry" role="listitem">
 Pereira, B. L., Said, A., &amp; Santos, R. L. T. (2025). Online learning to rank for sequential music recommendation. <em>Proceedings of the 19th ACM Conference on Recommender Systems</em>. <a href="https://doi.org/10.1145/3705328.3748086">https://doi.org/10.1145/3705328.3748086</a>
 </div>
