@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.33">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Publications – Rodrygo Santos</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -55,10 +61,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5490c0ab749637d15c945dbf0a144fd4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7890db730ad1d419123a76f755a80563.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -215,7 +221,7 @@ Santos, R. L. T., Macdonald, C., McCreadie, R., Ounis, I., &amp; Soboroff, I. (2
 Trippas, J. R., Culpepper, J. S., Aliannejadi, M., Allan, J., Amigó, E., Arguello, J., Azzopardi, L., Bailey, P., Callan, J., Capra, R., Craswell, N., Croft, B., Dalton, J., Demartini, G., Dietz, L., Dou, Z., Eickhoff, C., Ekstrand, M., Ferro, N., … Zuccon, G. (2025). <a href="">Report from the fourth strategic workshop on information retrieval in lorne (SWIRL 2025)</a>. <em><span>SIGIR</span> Forum</em>, <em>59</em>(1), 1–68.
 </div>
 <div id="ref-franca2024neurocomputing" class="csl-entry" role="listitem">
-França, C., Lima, R. C., Andrade, C., Cunha, W., de Melo, P. O. S. V., Ribeiro-Neto, B., Rocha, L., Santos, R. L. T., Pagano, A. S., &amp; Gonçalves, M. A. (2024). On representation learning-based methods for effective, efficient, and scalable code retrieval. <em>Neurocomputing</em>, <em>600</em>, 128172. https://doi.org/<a href="https://doi.org/10.1016/j.neucom.2024.128172">https://doi.org/10.1016/j.neucom.2024.128172</a>
+<span class="nocase">França, C., Lima, R. C., Andrade, C., Cunha, W., de Melo, P. O. S. V., Ribeiro-Neto, B., Rocha, L., Santos, R. L. T., Pagano, A. S., &amp; Gonçalves, M. A.</span> (2024). On representation learning-based methods for effective, efficient, and scalable code retrieval. <em>Neurocomputing</em>, <em>600</em>, 128172. https://doi.org/<a href="https://doi.org/10.1016/j.neucom.2024.128172">https://doi.org/10.1016/j.neucom.2024.128172</a>
 </div>
 <div id="ref-hurley2024dagrep" class="csl-entry" role="listitem">
 Hurley, N., Bellogín, A., Jeunen, O., Parra, D., Santos, R. L. T., &amp; Tuzhilin, A. (2024). Theory of evaluation. <em>Dagstuhl Reports</em>, <em>14</em>(5), 69–91. <a href="https://doi.org/10.4230/DagRep.14.5.58">https://doi.org/10.4230/DagRep.14.5.58</a>
@@ -603,13 +609,14 @@ Santos, R. L. T., Rocha, B. P. S., Rezende, C. G., &amp; Loureiro, A. A. F. (200
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
