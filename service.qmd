@@ -2,10 +2,18 @@
 title: "Service"
 ---
 
+## 2027
+
+- Program Committee co-chair of RecSys 2027
+
 ## 2026
 
+- Editorial Board member of ACM Transactions on Information Systems
+- Editorial Board member of Found. and Trends in Information Retrieval
 - Senior Program Committee member of ECIR 2025
+- Senior Program Committee member of SIGIR 2025
 - Short Paper Program Committee co-chair of WSDM 2026
+- Steering Committee member of RecSys
 
 ## 2025
 
