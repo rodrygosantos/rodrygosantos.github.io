@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - rodrygo.png
 
 execute:
   freeze: auto
@@ -26,6 +28,16 @@ website:
   sidebar:
     title: "Rodrygo Santos"
     logo: "rodrygo.png"
+    logo-alt: "Portrait of Rodrygo Santos"
+    style: docked
+    contents:
+      - index.qmd
+      - research.qmd
+      - students.qmd
+      - service.qmd
+      - teaching.qmd
+      - publications.qmd
+      - contact.qmd
     pinned: true
     search: true
     footer: "[{{< iconify fa6-brands x-twitter size=1.2em >}}](https://twitter.com/rodrygo_santos) 
@@ -34,6 +46,5 @@ website:
              [{{< iconify academicons lattes size=1.2em >}}](http://lattes.cnpq.br/1162362624079364) 
              [{{< iconify simple-icons dblp size=1.2em >}}](http://www.informatik.uni-trier.de/~ley/pers/hd/s/Santos:Rodrygo_L=_T=) 
              [{{< iconify fa6-brands google-scholar size=1.2em >}}](https://scholar.google.com/citations?user=NAyozE0AAAAJ)"
-
 
 

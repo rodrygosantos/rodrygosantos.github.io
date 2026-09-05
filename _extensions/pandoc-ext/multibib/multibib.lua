@@ -117,7 +117,10 @@ local function create_topic_bibliography (div)
   if not bibfile then
     return nil
   end
-  local tmp_blocks = {pandoc.Para(all_cites), refs_div}
+  -- `nocite: '@*'` selects the entries for each bibliography. Replaying the
+  -- wildcard citation here makes citeproc warn because it has no printable
+  -- in-text form.
+  local tmp_blocks = {pandoc.Para{}, refs_div}
   local tmp_meta = meta_for_pandoc_citeproc(bibfile)
   local tmp_doc = pandoc.Pandoc(tmp_blocks, tmp_meta)
   local res = citeproc(tmp_doc)
