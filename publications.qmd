@@ -3,6 +3,7 @@ title: "Publications"
 csl: apa-cv.csl
 filters:
   - multibib
+  - publications-bib.lua
 validate-yaml: false
 bibliography:
   theses: _bibliography/theses.bib
