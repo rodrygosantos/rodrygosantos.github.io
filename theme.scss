@@ -54,7 +54,6 @@ $text-muted: #6a737b;
 
 /* BibTeX controls on the publications page. */
 .publication-bib-toggle {
-  margin-left: 0.35rem;
   padding: 0;
   border: 0;
   background: transparent;
@@ -65,10 +64,34 @@ $text-muted: #6a737b;
   vertical-align: baseline;
 }
 
+.publication-citation-controls {
+  display: inline-block;
+  margin-left: 0.35rem;
+  text-indent: 0;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.publication-citation-controls > * + * {
+  margin-left: 0.35rem;
+}
+
+.publication-citation-link {
+  font-family: $font-family-monospace;
+  font-size: 0.75em;
+  line-height: 1;
+  text-decoration: none;
+}
+
 .publication-bib-toggle:hover,
 .publication-bib-toggle:focus-visible {
   background: transparent;
-  text-decoration: underline;
+  text-decoration: none;
+}
+
+.publication-citation-link:hover,
+.publication-citation-link:focus-visible {
+  text-decoration: none;
 }
 
 .publication-bib-entry {

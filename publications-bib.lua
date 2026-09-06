@@ -121,6 +121,26 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Show BibTeX for " + key);
 
+    var links = { doi: [], pdf: [] };
+    citation.querySelectorAll("a[href]").forEach(function (link) {
+      var href = link.href;
+      if (/doi\.org/i.test(href)) {
+        link.textContent = "[doi]";
+        link.classList.add("publication-citation-link");
+        links.doi.push(link);
+      } else if (/\.pdf(?:$|[?#])/i.test(href)) {
+        link.textContent = "[pdf]";
+        link.classList.add("publication-citation-link");
+        links.pdf.push(link);
+      }
+    });
+
+    var controls = document.createElement("span");
+    controls.className = "publication-citation-controls";
+    controls.appendChild(toggle);
+    links.doi.forEach(function (link) { controls.appendChild(link); });
+    links.pdf.forEach(function (link) { controls.appendChild(link); });
+
     var container = document.createElement("div");
     container.className = "publication-bib-entry";
     container.hidden = true;
@@ -156,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggle.setAttribute("aria-label", (visible ? "Hide" : "Show") + " BibTeX for " + key);
     });
 
-    citation.appendChild(toggle);
+    citation.appendChild(controls);
     citation.appendChild(container);
   });
 });
