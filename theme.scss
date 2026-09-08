@@ -52,6 +52,12 @@ $text-muted: #6a737b;
   border-right: 0 !important;
 }
 
+/* Retain Quarto's sidebar structure for its native TOC tracking, without
+   displaying the redundant page-navigation menu. */
+#quarto-sidebar .sidebar-menu-container {
+  display: none;
+}
+
 /* BibTeX controls on the publications page. */
 .publication-bib-toggle {
   padding: 0;
