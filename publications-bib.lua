@@ -5,18 +5,6 @@ local function trim(value)
   return value:match("^%s*(.-)%s*$")
 end
 
-local function json_escape(value)
-  return value:gsub("[\\\"\b\f\n\r\t]", {
-    ["\\"] = "\\\\",
-    ["\""] = "\\\"",
-    ["\b"] = "\\b",
-    ["\f"] = "\\f",
-    ["\n"] = "\\n",
-    ["\r"] = "\\r",
-    ["\t"] = "\\t",
-  }):gsub("</", "<\\/")
-end
-
 local function bib_entries(path)
   local file = assert(io.open(path, "r"), "Unable to read bibliography: " .. path)
   local source = file:read("*a")
@@ -87,115 +75,6 @@ local bibliography_paths = {
   "_bibliography/reports.bib",
 }
 
-local function build_client_controls(doc)
-  local records = {}
-  for _, path in ipairs(bibliography_paths) do
-    for key, entry in pairs(bib_entries(path)) do
-      records[key] = entry
-    end
-  end
-
-  local encoded = {}
-  for key, entry in pairs(records) do
-    table.insert(encoded, '"' .. json_escape(key) .. '":"' .. json_escape(entry) .. '"')
-  end
-
-  table.sort(encoded)
-  local data = table.concat(encoded, ",")
-  local script = [[
-<script id="publication-bibtex-data" type="application/json">{]] .. data .. [[}</script>
-<script>
-function buildPublicationControls() {
-  var source = document.getElementById("publication-bibtex-data");
-  if (!source) return;
-  var entries = JSON.parse(source.textContent);
-  document.querySelectorAll(".csl-entry[id^='ref-']").forEach(function (citation) {
-    var key = citation.id.slice(4);
-    var bibtex = entries[key];
-    if (!bibtex) return;
-
-    var toggle = document.createElement("button");
-    toggle.type = "button";
-    toggle.className = "publication-bib-toggle";
-    toggle.textContent = "[bib]";
-    toggle.setAttribute("aria-expanded", "false");
-    toggle.setAttribute("aria-label", "Show BibTeX for " + key);
-
-    var links = { doi: [], pdf: [] };
-    citation.querySelectorAll("a[href]").forEach(function (link) {
-      var href = link.href;
-      if (/doi\.org/i.test(href)) {
-        link.textContent = "[doi]";
-        link.classList.add("publication-citation-link");
-        links.doi.push(link);
-      } else if (/\.pdf(?:$|[?#])/i.test(href)) {
-        link.textContent = "[pdf]";
-        link.classList.add("publication-citation-link");
-        links.pdf.push(link);
-      }
-    });
-
-    var controls = document.createElement("span");
-    controls.className = "publication-citation-controls";
-    controls.appendChild(toggle);
-    links.doi.forEach(function (link) { controls.appendChild(link); });
-    links.pdf.forEach(function (link) { controls.appendChild(link); });
-
-    var container = document.createElement("div");
-    container.className = "publication-bib-entry";
-    container.hidden = true;
-    var code = document.createElement("code");
-    code.textContent = bibtex;
-    var block = document.createElement("pre");
-    block.appendChild(code);
-    var copy = document.createElement("button");
-    copy.type = "button";
-    copy.className = "publication-bib-copy";
-    copy.setAttribute("aria-label", "Copy BibTeX for " + key);
-    copy.setAttribute("title", "Copy BibTeX");
-    copy.innerHTML = '<svg class="publication-bib-copy-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 6.75C0 5.784.784 5 1.75 5h7.5C10.216 5 11 5.784 11 6.75v7.5c0 .966-.784 1.75-1.75 1.75h-7.5A1.75 1.75 0 0 1 0 14.25ZM1.75 6.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H13V9.5h1.25a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25V3H5Z"></path></svg><svg class="publication-bib-check-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m13.78 3.97-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 7.97l1.06-1.06L6 9.63l6.72-6.72Z"></path></svg>';
-    copy.addEventListener("click", function () {
-      navigator.clipboard.writeText(bibtex).then(function () {
-        copy.classList.add("is-copied");
-        copy.setAttribute("aria-label", "Copied BibTeX for " + key);
-        copy.setAttribute("title", "Copied!");
-        window.setTimeout(function () {
-          copy.classList.remove("is-copied");
-          copy.setAttribute("aria-label", "Copy BibTeX for " + key);
-          copy.setAttribute("title", "Copy BibTeX");
-        }, 1500);
-      });
-    });
-    container.appendChild(copy);
-    container.appendChild(block);
-
-    toggle.addEventListener("click", function () {
-      var visible = container.hidden;
-      container.hidden = !visible;
-      toggle.setAttribute("aria-expanded", String(visible));
-      toggle.setAttribute("aria-label", (visible ? "Hide" : "Show") + " BibTeX for " + key);
-    });
-
-    citation.appendChild(controls);
-    citation.appendChild(container);
-  });
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-  window.setTimeout(function () {
-    try {
-      buildPublicationControls();
-    } finally {
-      document.documentElement.classList.remove("publications-pending");
-    }
-  }, 0);
-});
-</script>]]
-
-  table.insert(doc.blocks, pandoc.RawBlock("html", script))
-  return doc
-end
-
 local function html_escape(value)
   return value:gsub("&", "&amp;")
     :gsub("<", "&lt;")
@@ -214,7 +93,7 @@ function Pandoc(doc)
     end
   end
 
-  doc:walk({
+  doc = doc:walk({
     Div = function(div)
       local key = div.identifier:match("^ref%-(.+)$")
       local bibtex = key and records[key]
@@ -225,10 +104,10 @@ function Pandoc(doc)
         Link = function(link)
           local href = link.target
           local kind = href:match("doi%.org") and "doi" or
-            (href:match("%.pdf([?#].*)?$") and "pdf" or nil)
+            ((href:match("%.pdf$") or href:match("%.pdf[?#]")) and "pdf" or nil)
           if kind then
             table.insert(links[kind], href)
-            link.classes:insert("publication-source-link")
+            return {}
           end
           return link
         end
@@ -283,12 +162,4 @@ document.addEventListener("click", function (event) {
 </script>]]
   table.insert(doc.blocks, pandoc.RawBlock("html", script))
   return doc
-end
-
--- Quarto's cite processing happens after Lua filters run, so the generated
--- bibliography entries are not available for static rewriting here. Emit the
--- controls script at the end of the document instead, where it runs before
--- the first paint rather than mutating a visible page at DOMContentLoaded.
-function Pandoc(doc)
-  return build_client_controls(doc)
 end

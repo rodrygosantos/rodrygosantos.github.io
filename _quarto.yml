@@ -2,6 +2,7 @@ project:
   type: website
   resources:
     - rodrygo.png
+    - assets/fonts/
 
 execute:
   freeze: auto
@@ -11,6 +12,8 @@ format:
     theme:
       light: [cosmo, theme.scss]
     toc: true
+    css: fonts.css
+    include-in-header: font-preload.html
 
 website:
   title: "Rodrygo Santos"

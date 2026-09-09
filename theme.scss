@@ -1,6 +1,8 @@
 /*-- scss:defaults --*/
 $link-color: #39729E;
 $text-muted: #6a737b;
+$font-family-sans-serif: "Carlito", "Arial", sans-serif;
+$web-font-path: false;
 
 /*-- scss:rules --*/
 
@@ -37,6 +39,9 @@ $text-muted: #6a737b;
 
 .sidebar-logo {
     border-radius: 50%;
+    width: 90%;
+    aspect-ratio: 1;
+    height: auto;
 }
 
 .sidebar-footer-item {
@@ -58,23 +63,46 @@ $text-muted: #6a737b;
   display: none;
 }
 
-/* On Publications, reveal the citation-heavy main document only after its
-   controls are prepared. The header and docked sidebar stay visible. */
-html.publications-pending main.content {
-  visibility: hidden;
+/* Give the navbar and its reserved space the same explicit design dimension.
+   Quarto can still measure an expanded mobile menu when it opens. */
+:root {
+  --site-navbar-height: 4rem;
+  --site-breadcrumb-height: 2rem;
 }
 
-/* Quarto measures the fixed header after JavaScript starts, which otherwise
-   causes a visible initial jump. Match that stable desktop offset in CSS. */
+#quarto-header .navbar {
+  min-height: var(--site-navbar-height);
+}
+
+body.nav-fixed {
+  padding-top: calc(var(--site-navbar-height) + var(--site-breadcrumb-height));
+}
+
+body.nav-fixed #quarto-content {
+  min-height: calc(100vh - var(--site-navbar-height) - var(--site-breadcrumb-height));
+}
+
+#quarto-header .quarto-secondary-nav {
+  height: var(--site-breadcrumb-height);
+}
+
 @media (min-width: 992px) {
-  body.nav-sidebar {
-    padding-top: 60px;
+  #quarto-header .navbar {
+    height: var(--site-navbar-height);
+  }
+
+  body.nav-fixed {
+    padding-top: var(--site-navbar-height);
+  }
+
+  body.nav-fixed #quarto-content {
+    min-height: calc(100vh - var(--site-navbar-height));
   }
 
   body.nav-sidebar #quarto-sidebar,
   body.nav-sidebar #quarto-margin-sidebar {
-    top: 60px;
-    max-height: calc(100vh - 60px);
+    top: var(--site-navbar-height);
+    max-height: calc(100vh - var(--site-navbar-height));
   }
 }
 

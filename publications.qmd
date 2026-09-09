@@ -1,6 +1,8 @@
 ---
 title: "Publications"
 csl: apa-cv.csl
+# Render title mathematics at build time; no browser-side MathJax is needed.
+html-math-method: mathml
 filters:
   - multibib
   - publications-bib.lua
@@ -20,8 +22,6 @@ bibliography:
 nocite: |
     @*
 ---
-
-<script>document.documentElement.classList.add("publications-pending");</script>
 
 ## Theses
 
