@@ -58,6 +58,23 @@ $text-muted: #6a737b;
   display: none;
 }
 
+/* Center the complete desktop canvas on wide screens. The header background
+   remains full width; its contents, docked sidebar, and document share the
+   same centered 1800px viewport. */
+@media (min-width: 1800px) {
+  #quarto-header .navbar-container,
+  body.nav-sidebar #quarto-content {
+    width: 1800px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  body.nav-sidebar #quarto-sidebar {
+    left: calc((100vw - 1800px) / 2);
+  }
+}
+
 /* BibTeX controls on the publications page. */
 .publication-bib-toggle {
   padding: 0;
