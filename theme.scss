@@ -52,6 +52,22 @@ $web-font-path: false;
   margin-top: 2rem;
 }
 
+.quarto-sidebar-footer a {
+  opacity: 0.6;
+  transition: opacity 160ms ease;
+}
+
+.quarto-sidebar-footer a:hover,
+.quarto-sidebar-footer a:focus-visible {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quarto-sidebar-footer a {
+    transition: none;
+  }
+}
+
 /* The docked sidebar remains visually integrated with the page content. */
 #quarto-sidebar {
   border-right: 0 !important;

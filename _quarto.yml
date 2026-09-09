@@ -41,7 +41,7 @@ website:
       - publications.qmd
       - contact.qmd
     pinned: true
-    footer: "[{{< iconify fa6-brands x-twitter size=1.2em >}}](https://twitter.com/rodrygo_santos) 
+    footer: "[{{< iconify fa6-brands x-twitter size=1.2em >}}](https://x.com/rodrygo_santos) 
              [{{< iconify fa6-brands linkedin size=1.2em >}}](https://www.linkedin.com/in/rodrygo) 
              [{{< iconify fa6-brands github size=1.2em >}}](https://github.com/rodrygosantos) 
              [{{< iconify academicons lattes size=1.2em >}}](http://lattes.cnpq.br/1162362624079364) 
