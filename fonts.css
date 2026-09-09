@@ -1,0 +1,29 @@
+/* Local Carlito faces; optional display avoids a late layout-changing swap. */
+@font-face {
+  font-family: "Carlito";
+  src: url("assets/fonts/Carlito-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("assets/fonts/Carlito-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("assets/fonts/Carlito-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+  font-display: optional;
+}
+@font-face {
+  font-family: "Carlito";
+  src: url("assets/fonts/Carlito-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+  font-display: optional;
+}
