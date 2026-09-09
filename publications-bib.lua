@@ -87,7 +87,7 @@ local bibliography_paths = {
   "_bibliography/reports.bib",
 }
 
-function Pandoc(doc)
+local function build_client_controls(doc)
   local records = {}
   for _, path in ipairs(bibliography_paths) do
     for key, entry in pairs(bib_entries(path)) do
@@ -105,7 +105,7 @@ function Pandoc(doc)
   local script = [[
 <script id="publication-bibtex-data" type="application/json">{]] .. data .. [[}</script>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+function buildPublicationControls() {
   var source = document.getElementById("publication-bibtex-data");
   if (!source) return;
   var entries = JSON.parse(source.textContent);
@@ -179,9 +179,116 @@ document.addEventListener("DOMContentLoaded", function () {
     citation.appendChild(controls);
     citation.appendChild(container);
   });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.setTimeout(function () {
+    try {
+      buildPublicationControls();
+    } finally {
+      document.documentElement.classList.remove("publications-pending");
+    }
+  }, 0);
 });
 </script>]]
 
   table.insert(doc.blocks, pandoc.RawBlock("html", script))
   return doc
+end
+
+local function html_escape(value)
+  return value:gsub("&", "&amp;")
+    :gsub("<", "&lt;")
+    :gsub(">", "&gt;")
+    :gsub('"', "&quot;")
+    :gsub("'", "&#39;")
+end
+
+local copy_icon = [[<svg class="publication-bib-copy-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 6.75C0 5.784.784 5 1.75 5h7.5C10.216 5 11 5.784 11 6.75v7.5c0 .966-.784 1.75-1.75 1.75h-7.5A1.75 1.75 0 0 1 0 14.25ZM1.75 6.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11H13V9.5h1.25a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25h-7.5a.25.25 0 0 0-.25.25V3H5Z"></path></svg><svg class="publication-bib-check-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m13.78 3.97-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 7.97l1.06-1.06L6 9.63l6.72-6.72Z"></path></svg>]]
+
+function Pandoc(doc)
+  local records = {}
+  for _, path in ipairs(bibliography_paths) do
+    for key, entry in pairs(bib_entries(path)) do
+      records[key] = entry
+    end
+  end
+
+  doc:walk({
+    Div = function(div)
+      local key = div.identifier:match("^ref%-(.+)$")
+      local bibtex = key and records[key]
+      if not bibtex then return nil end
+
+      local links = { doi = {}, pdf = {} }
+      local citation = div:walk({
+        Link = function(link)
+          local href = link.target
+          local kind = href:match("doi%.org") and "doi" or
+            (href:match("%.pdf([?#].*)?$") and "pdf" or nil)
+          if kind then
+            table.insert(links[kind], href)
+            link.classes:insert("publication-source-link")
+          end
+          return link
+        end
+      })
+
+      local controls = '<span class="publication-citation-controls">'
+        .. '<button type="button" class="publication-bib-toggle" aria-expanded="false" aria-label="Show BibTeX for '
+        .. html_escape(key) .. '">[bib]</button>'
+      for _, kind in ipairs({ "doi", "pdf" }) do
+        for _, href in ipairs(links[kind]) do
+          controls = controls .. '<a class="publication-citation-link" href="'
+            .. html_escape(href) .. '">[' .. kind .. ']</a>'
+        end
+      end
+      controls = controls .. '</span><div class="publication-bib-entry" hidden>'
+        .. '<button type="button" class="publication-bib-copy" aria-label="Copy BibTeX for '
+        .. html_escape(key) .. '" title="Copy BibTeX">' .. copy_icon .. '</button>'
+        .. '<pre><code>' .. html_escape(bibtex) .. '</code></pre></div>'
+      table.insert(citation.content, pandoc.RawBlock("html", controls))
+      return citation
+    end
+  })
+
+  local script = [[
+<script>
+document.addEventListener("click", function (event) {
+  var toggle = event.target.closest(".publication-bib-toggle");
+  if (toggle) {
+    var entry = toggle.parentElement.nextElementSibling;
+    var visible = entry.hidden;
+    entry.hidden = !visible;
+    toggle.setAttribute("aria-expanded", String(visible));
+    toggle.setAttribute("aria-label", (visible ? "Hide" : "Show") + toggle.getAttribute("aria-label").slice(4));
+    return;
+  }
+
+  var copy = event.target.closest(".publication-bib-copy");
+  if (copy) {
+    var bibtex = copy.parentElement.querySelector("code").textContent;
+    navigator.clipboard.writeText(bibtex).then(function () {
+      copy.classList.add("is-copied");
+      copy.setAttribute("aria-label", "Copied BibTeX");
+      copy.setAttribute("title", "Copied!");
+      window.setTimeout(function () {
+        copy.classList.remove("is-copied");
+        copy.setAttribute("aria-label", "Copy BibTeX");
+        copy.setAttribute("title", "Copy BibTeX");
+      }, 1500);
+    });
+  }
+});
+</script>]]
+  table.insert(doc.blocks, pandoc.RawBlock("html", script))
+  return doc
+end
+
+-- Quarto's cite processing happens after Lua filters run, so the generated
+-- bibliography entries are not available for static rewriting here. Emit the
+-- controls script at the end of the document instead, where it runs before
+-- the first paint rather than mutating a visible page at DOMContentLoaded.
+function Pandoc(doc)
+  return build_client_controls(doc)
 end

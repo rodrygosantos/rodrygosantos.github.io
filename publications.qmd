@@ -21,6 +21,8 @@ nocite: |
     @*
 ---
 
+<script>document.documentElement.classList.add("publications-pending");</script>
+
 ## Theses
 
 ::: {#refs-theses}
