@@ -4,11 +4,13 @@ This repository contains the Quarto source for <https://rodrygosantos.github.io/
 
 ## Build locally
 
-Install [Quarto](https://quarto.org/) and render the complete site from the repository root:
+Install [Quarto 1.11.9](https://quarto.org/) and render the complete site from the repository root. This is the version pinned in the GitHub Pages workflow, so local and deployed output remain consistent:
 
 ```sh
 quarto render
 ```
+
+Check the installed version with `quarto --version` before rendering. When deliberately upgrading Quarto, update the version in `.github/workflows/publish.yml` at the same time.
 
 The generated static site is written to `_site/`.
 
