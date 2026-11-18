@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://rodrygosantos.github.io/students.html</loc>
-    <lastmod>2026-11-14T15:49:00.950Z</lastmod>
-  </url>
-  <url>
     <loc>https://rodrygosantos.github.io/research.html</loc>
-    <lastmod>2026-11-14T15:49:00.945Z</lastmod>
+    <lastmod>2026-11-18T11:20:27.274Z</lastmod>
   </url>
   <url>
-    <loc>https://rodrygosantos.github.io/contact.html</loc>
-    <lastmod>2026-11-14T15:49:00.944Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rodrygosantos.github.io/service.html</loc>
-    <lastmod>2026-11-14T15:49:00.950Z</lastmod>
-  </url>
-  <url>
-    <loc>https://rodrygosantos.github.io/teaching.html</loc>
-    <lastmod>2026-11-14T15:49:00.950Z</lastmod>
+    <loc>https://rodrygosantos.github.io/students.html</loc>
+    <lastmod>2026-11-18T11:20:27.280Z</lastmod>
   </url>
   <url>
     <loc>https://rodrygosantos.github.io/publications.html</loc>
-    <lastmod>2026-11-14T15:49:00.945Z</lastmod>
+    <lastmod>2026-11-18T11:20:27.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rodrygosantos.github.io/service.html</loc>
+    <lastmod>2026-11-18T11:20:27.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rodrygosantos.github.io/contact.html</loc>
+    <lastmod>2026-11-18T11:20:27.274Z</lastmod>
+  </url>
+  <url>
+    <loc>https://rodrygosantos.github.io/teaching.html</loc>
+    <lastmod>2026-11-18T11:20:27.280Z</lastmod>
   </url>
   <url>
     <loc>https://rodrygosantos.github.io/index.html</loc>
-    <lastmod>2026-11-14T15:49:00.945Z</lastmod>
+    <lastmod>2026-11-18T11:20:27.274Z</lastmod>
   </url>
 </urlset>
