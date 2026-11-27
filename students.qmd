@@ -19,7 +19,6 @@ I am always keen to supervise highly motivated students in the broad area of [in
 - João Victor da Silva Dias Canavarro
 - João Vítor Fernandes Dias
 - Jorge Augusto de Lima e Silva
-- Regis Nogueira Fontes
 
 ## Former students
 
@@ -30,6 +29,8 @@ I am always keen to supervise highly motivated students in the broad area of [in
 
 ### MSc students
 
+- Regis Nogueira Fontes (MSc, 2026)\
+  [Title-based automatic playlist continuation](#)
 - Breno de Sousa Matos (MSc, 2024)\
   [Towards misinformation span detection](#)
 - Rennan Cordeiro Lima (MSc, 2023)\
